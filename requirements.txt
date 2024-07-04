@@ -1,0 +1,6 @@
+telebot
+torch
+numpy
+transformers
+tqdm
+python-dotenv
