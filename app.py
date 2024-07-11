@@ -77,7 +77,7 @@ def answer(message):
     article_text = message.text
     input_ids = tokenizer(
         [article_text],
-        max_length=512,  # Максимальная длина входа для модели
+        max_length=512,  
         truncation=True,
         return_tensors="pt"
     )["input_ids"]
@@ -95,7 +95,7 @@ def answer(message):
         output_ids = model.generate(
             input_ids=input_ids,
             min_length=summary_length,
-            max_length=512,  # Максимальная длина суммаризации
+            max_length=512,
             no_repeat_ngram_size=2
         )[0]
 
